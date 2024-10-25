@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/response.css">
+        
+        <title>Evidence Kávy</title>
+    </head>
+    
+    <body>
+        <form id="dataForm" action="http://ajax1.lmsoft.cz/procedure.php?cmd=saveDrinks" method="post">
+            <h2>Evidence Kávy</h2>
+
+            <h3 id="person-title">Vyber osobu:</h3>
+            <div id="nameInputs"></div>
+
+            <h3>Zadej množství kávy:</h3>
+            <div id="coffeeInputs"></div>
+
+            <input type="hidden" name="data" id="dataField">
+
+            <button type="submit">Submit</button>
+        </form>
+        
+        <div id="summary"></div>
+
+        <form id="monthlyStatisticsForm">
+            <label for="month">Enter month (for statistics): </label>
+            <input type="number" name="month" id="month">
+
+            <button type="submit">Submit Month</button>
+        </form>
+
+        <table id="statisticsTable"></table>
+
+        <script src="js/app.js"></script>
+    </body>
+</html>
